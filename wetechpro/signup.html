@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body style="background: #FFCCCB">
+    <div class="total">
+        <div class="login"><br>
+         <tr>
+                 <center><p class="dont">Enter Username:</p></center><br>
+                 <center><td><input type="text" placeholder="Enter username here" class="input-signup-username" /></td></center>
+                 </tr><br>
+                 <tr>
+             <tr>
+                 <center><p class="dont">Enter Password :</p><br></center>
+                 <center><td><input type="password" placeholder="Enter Password here" class="input-signup-password" /></td></center>
+                  </tr><br><br>
+                 <center><p class="dont">Enter Phone Number:(optional)</p><br></center>
+                 <center><td><input type="text" placeholder="Enter phone number here" class="pass" /></td></center>
+                 </tr><br>
+                 <tr>
+                     <center><input type="submit" value="Sign Up" class="signup__signInButton" onClick="btnRegister" /></td></center>
+                     </tr><br><br>
+                     <center><p class="dont">Already have an account? Log In here!</p></center><br>
+                     <center><a href="/login.html">
+                     <button class="login1">Log In</button></a></center>
+     </div>
+     </div>
+    <script>
+        const inputUsernameRegister = document.querySelector(".input-signup-username");
+        const inputPasswordRegister = document.querySelector(".input-signup-password");
+        const btnRegister = document.querySelector(".signup__signInButton");
+        
+        btnRegister.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          if (
+            inputUsernameRegister.value === "" ||
+            inputPasswordRegister.value === ""
+          ) {
+          } else {
+            const user = {
+              username: inputUsernameRegister.value,
+              password: inputPasswordRegister.value,
+            };
+            let json = JSON.stringify(user);
+            localStorage.setItem(inputUsernameRegister.value, json);
+            alert("Đăng Ký Thành Công");
+            window.location.href = "login.html";
+          }
+        });
+        </script>
+</body>
+</html>

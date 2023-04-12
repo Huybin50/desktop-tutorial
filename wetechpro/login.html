@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body style="background: #FFCCCB">
+    <div class="total">
+        <div class="login"><br>
+         <tr>
+             <center><p class="dont">Enter Username:</p></center><br>
+             <center><td><input type="text" placeholder="Enter username here" class="input-login-username" /></td></center>
+             </tr><br>
+             <tr>
+                 <center><p class="dont">Enter Password :</p><br></center>
+                <center><td><input type="password" placeholder="Enter Password here" class="input-login-password" /></td></center>
+                 </tr>
+                 <td></td>
+                 <td><br>
+                 <center><input type="submit" value="Log In" class="login__signInButton" onClick="btnLogin" /></td></center><br><br>
+                 </tr>
+         <center><p class="dont">Don't have an account? Sign up here:</p></center><br>
+         <a href="/signup.html">
+         <center><button class="login1">Sign Up</button></center><br>
+     </a>
+     </div>
+     </div>
+    <script>
+const inputUsername = document.querySelector(".input-login-username");
+const inputPassword = document.querySelector(".input-login-password");
+const btnLogin = document.querySelector(".login__signInButton");
+
+btnLogin.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (inputUsername.value === "" || inputPassword.value === "") {
+    alert("vui lòng không để trống");
+  } else {
+    const user = JSON.parse(localStorage.getItem(inputUsername.value));
+    if (
+      user.username === inputUsername.value &&
+      user.password === inputPassword.value
+    ) {
+      alert("Đăng Nhập Thành Công");
+      window.location.href = "/tem.html";
+    } else {
+      alert("Đăng Nhập Thất Bại");
+    }
+  }
+});
+    </script>
+</body>
+</html>
