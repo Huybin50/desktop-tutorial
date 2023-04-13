@@ -1,5 +1,5 @@
 .total{
-    background-image: url("https://thuvienhoasen.org/images/file/Kg4MjFJ21wgBAPVs/troi-xanh-may-trang.jpg");
+    background-image: url("https://binhminhdigital.com/StoreData/images/PageData/bi-quyet-chup-anh-hoang-hon-dep-Binhminhdigital(1).jpg");
     width: 100%;
     height: 102vh;
     border: 1px solid;
@@ -11,10 +11,10 @@
     align-items: center;
 }
 .login{
-    background-color: lightblue;
+    background-color: #E3BC9A;
     width: 400px;
-    height: 350px;
-    box-shadow: 0 0 30px blue;
+    height: 440px;
+    box-shadow: 0 0 30px pink;
 }
 *{
     Padding : 0;
@@ -22,12 +22,13 @@
     Box-sizing : border-box ; 
     }
 .password{
-    color: yellow;
+    color: black;
 }
 .login1{
     width: 70px;
     height: 35px;
     background-color: white;
+    border-radius: 15px;
 }
 .pass{
     width: 200px;
@@ -38,9 +39,11 @@
     padding-left: 20px;
 }
 .login1:hover{
-    background-color: black;
-    width: 300px;
-    color: yellow;
+    background-color: rgb(248, 81, 4);
+    transition-duration: 2s;
+    width: 200px;
+    color: white;
+    border-radius: 15px;
 }
 input a:hover{
     font-weight: bold;
@@ -52,7 +55,7 @@ input::placeholder{
     color: grey;
 }
 .dont{
-    color: yellow;
+    color: black;
 }
 .pass:hover{
     width: 300px;
@@ -61,11 +64,14 @@ input::placeholder{
     width: 70px;
     height: 35px;
     background-color: white;
+    border-radius: 15px;
 }
 .login__signInButton:hover{
-    background-color: black;
-    width: 300px;
-    color: yellow;
+    background-color: rgb(248, 81, 4);
+    transition-duration: 2s;
+    width: 200px;
+    color: white;
+    border-radius: 15px;
 }
 .input-login-username{
     width: 200px;
@@ -85,7 +91,11 @@ input::placeholder{
 }
 .input-login-username:hover{
     width: 300px;
+    transition-duration: 2s;
+    border-radius: 15px;
 }
 .input-login-password:hover{
     width: 300px;
+    transition-duration: 2s;
+    border-radius: 15px;
 }
